@@ -1,0 +1,53 @@
+:root {
+  /* Variables de colores */
+  --primary-color: #14d64d;
+  --background-light: #ffffff;
+  --background-dark: #242424;
+  --text-light: #213547;
+  --text-dark: rgba(255, 255, 255, 0.87);
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  /* Configuración base */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Tema claro por defecto */
+  color-scheme: light dark;
+  color: var(--text-dark);
+  background-color: var(--background-dark);
+}
+
+/* Estilos para modo claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-light);
+    background-color: var(--background-light);
+  }
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
