@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../assets/logo.png';
 
 function Navbar() {
     const [darkMode, setDarkMode] = useState(false);
@@ -16,7 +17,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="logo">
-                <img src="/src/assets/logo.png" alt="PrecioYa" />
+                <img src={logo} alt="PrecioYa" /> 
                 <span>PrecioYA</span>
             </div>
             
