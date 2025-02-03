@@ -5,7 +5,7 @@ function Header() {
                 <h1>
                     <span className="highlight">Cotizaciones</span> en Tiempo Real
                 </h1>
-                <p>Mantente informado sobre las últimas cotizaciones del mercado financiero argentino</p>
+                <p>Consultá las cotizaciones actualizadas del dólar blue, oficial, MEP, CCL y cripto en Argentina. Información en tiempo real con actualización automática cada minuto.</p>
                 <div className="header-stats">
                     <div className="stat-item">
                         <span className="material-icons">update</span>
