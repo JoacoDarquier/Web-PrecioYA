@@ -20,6 +20,15 @@ function Header() {
                         <span>Variaciones</span>
                     </div>
                 </div>
+                <a 
+                    href="https://chromewebstore.google.com/detail/precioya-cotizaciones-arg/dafgedpmapidfeadbfolepjgneopoebk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="extension-button"
+                >
+                    <span className="material-icons">extension</span>
+                    Descarga nuestra extensión para Chrome
+                </a>
             </div>
         </header>
     );

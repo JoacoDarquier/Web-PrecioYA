@@ -571,3 +571,35 @@ body.dark-mode .footer {
         display: none;
     }
 }
+
+.extension-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #14d64d;
+    color: #000000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(20, 214, 77, 0.3);
+}
+
+.extension-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(20, 214, 77, 0.4);
+    background-color: #12c147;
+}
+
+.extension-button .material-icons {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .extension-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
