@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [darkMode, setDarkMode] = useState(false);
@@ -17,8 +18,10 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="logo">
-                <img src={logo} alt="PrecioYa" /> 
-                <span>PrecioYA</span>
+                <Link to="/">
+                    <img src={logo} alt="PrecioYa" /> 
+                    <span>PrecioYA</span>
+                </Link>
             </div>
             
             <button className="menu-toggle" onClick={toggleMenu}>
@@ -28,14 +31,14 @@ function Navbar() {
             </button>
 
             <div className={`nav-center ${isMenuOpen ? 'active' : ''}`}>
-                <a href="#" className="nav-link">
+                <Link to="/" className="nav-link">
                     <span className="material-icons">home</span>
                     Inicio
-                </a>
-                <a href="#" className="nav-link">
+                </Link>
+                <Link to="/noticias" className="nav-link">
                     <span className="material-icons">article</span>
                     Noticias
-                </a>
+                </Link>
             </div>
 
             <button className="theme-toggle" onClick={toggleDarkMode}>

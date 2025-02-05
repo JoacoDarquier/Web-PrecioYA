@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
@@ -6,6 +7,7 @@ import CategoryButtons from './components/CategoryButtons'
 import Card from './components/Card'
 import { fetchDolares, fetchCriptomonedas, fetchDolaresCripto } from './services/api'
 import Footer from './components/Footer'
+import Noticias from './pages/Noticias'
 
 function App() {
   const [category, setCategory] = useState("Dólares");
@@ -75,15 +77,22 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <Navbar />
-      <Header />
-      <CategoryButtons setCategory={setCategory} />
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', padding: '20px' }}>
-        {renderCards()}
-      </div>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Header />
+            <CategoryButtons setCategory={setCategory} />
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', padding: '20px' }}>
+              {renderCards()}
+            </div>
+          </>
+        } />
+        <Route path="/noticias" element={<Noticias />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   )
 }
 
