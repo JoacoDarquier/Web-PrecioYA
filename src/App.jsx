@@ -34,7 +34,7 @@ function App() {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 60000); // Actualizar cada minuto
+    const interval = setInterval(fetchData, 60000);
 
     return () => clearInterval(interval);
   }, [category]);
@@ -48,7 +48,7 @@ function App() {
             title={dolar.nombre}
             buy={dolar.compra}
             sell={dolar.venta}
-            variation={0} // Puedes agregar la variación si la API la proporciona
+            variation={0}
           />
         ));
       case "Dólar Cripto":
@@ -84,7 +84,7 @@ function App() {
           <>
             <Header />
             <CategoryButtons setCategory={setCategory} />
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', padding: '20px' }}>
+            <div className="cards-container">
               {renderCards()}
             </div>
           </>

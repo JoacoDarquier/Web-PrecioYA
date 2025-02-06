@@ -1,6 +1,6 @@
 function PriceCard({ title, buy, sell, variation }) {
     return (
-        <div className="price-card" itemScope itemType="https://schema.org/PriceSpecification">
+        <div className="card" itemScope itemType="https://schema.org/PriceSpecification">
             <div className="card-header">
                 <h3 itemProp="name">{title}</h3>
             </div>
