@@ -8,18 +8,37 @@ import Card from './components/Card'
 import { fetchDolares, fetchCriptomonedas, fetchDolaresCripto } from './services/api'
 import Footer from './components/Footer'
 import Noticias from './pages/Noticias'
+import LastUpdate from './components/LastUpdate'
 
 function App() {
   const [category, setCategory] = useState("Dólares");
   const [dolares, setDolares] = useState([]);
   const [criptomonedas, setCriptomonedas] = useState({});
   const [dolaresCripto, setDolaresCripto] = useState({});
+  const [lastUpdate, setLastUpdate] = useState(new Date().toLocaleString(undefined, { 
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  }));
 
   useEffect(() => {
     const fetchData = async () => {
+      setLastUpdate(new Date().toLocaleString(undefined, { 
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      }));
+      
       switch (category) {
         case "Dólares":
           const dolaresData = await fetchDolares();
+          console.log('Datos de dólares con variaciones:', dolaresData);
           setDolares(dolaresData);
           break;
         case "Dólar Cripto":
@@ -48,7 +67,7 @@ function App() {
             title={dolar.nombre}
             buy={dolar.compra}
             sell={dolar.venta}
-            variation={0}
+            variation={dolar.variation}
           />
         ));
       case "Dólar Cripto":
@@ -62,13 +81,13 @@ function App() {
           />
         ));
       case "Criptomonedas":
-        return Object.entries(criptomonedas).map(([crypto, prices]) => (
+        return Object.entries(criptomonedas).map(([crypto, data]) => (
           <Card
             key={crypto}
             title={crypto.charAt(0).toUpperCase() + crypto.slice(1)}
-            buy={prices.usd}
-            sell={prices.usd}
-            variation={0}
+            buy={data.usd}
+            sell={data.usd}
+            variation={data.variation}
           />
         ));
       default:
@@ -87,6 +106,7 @@ function App() {
             <div className="cards-container">
               {renderCards()}
             </div>
+            <LastUpdate timestamp={lastUpdate} />
           </>
         } />
         <Route path="/noticias" element={<Noticias />} />

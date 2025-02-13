@@ -664,3 +664,22 @@ body:not(.dark-mode) .price-value {
     min-width: 100%;
   }
 }
+
+.last-update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.last-update .material-icons {
+    font-size: 16px;
+}
+
+body:not(.dark-mode) .last-update {
+    color: rgba(0, 0, 0, 0.7);
+}
