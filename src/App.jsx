@@ -8,6 +8,7 @@ import Card from './components/Card'
 import { fetchDolares, fetchCriptomonedas, fetchDolaresCripto } from './services/api'
 import Footer from './components/Footer'
 import Noticias from './pages/Noticias'
+import Calculadora from './pages/Calculadora'
 import LastUpdate from './components/LastUpdate'
 
 function App() {
@@ -110,6 +111,7 @@ function App() {
           </>
         } />
         <Route path="/noticias" element={<Noticias />} />
+        <Route path="/calculadora" element={<Calculadora />} />
       </Routes>
       <Footer />
     </Router>

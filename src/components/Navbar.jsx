@@ -9,6 +9,7 @@ function Navbar() {
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
         document.body.classList.toggle('dark-mode');
+        window.dispatchEvent(new Event('dark-mode-toggle'));
     };
 
     const toggleMenu = () => {
@@ -38,6 +39,10 @@ function Navbar() {
                 <Link to="/noticias" className="nav-link">
                     <span className="material-icons">article</span>
                     Noticias
+                </Link>
+                <Link to="/calculadora" className="nav-link">
+                    <span className="material-icons">calculate</span>
+                    Calculadora
                 </Link>
             </div>
 
