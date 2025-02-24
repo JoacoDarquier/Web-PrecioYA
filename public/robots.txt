@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://precioya.vercel.app/sitemap.xml 
+Sitemap: https://precioya.com.ar/sitemap.xml 

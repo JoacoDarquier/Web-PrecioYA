@@ -3,7 +3,7 @@
 ## Descripción
 PrecioYA es una aplicación web que te permite consultar en tiempo real las cotizaciones del mercado financiero argentino, incluyendo diferentes tipos de dólar, criptomonedas y más.
 
-🌐 **[Visita la aplicación aquí](https://precioya.vercel.app/)**
+🌐 **[Visita la aplicación aquí](https://precioya.com.ar/)**
 
 ## Características principales ✨
 - Cotizaciones en tiempo real
@@ -63,8 +63,6 @@ Las contribuciones son bienvenidas. Por favor:
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## Licencia 📄
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
 ## Desarrollado por 👨‍💻
 [MangoIT](https://www.mangoit.com.ar/)
