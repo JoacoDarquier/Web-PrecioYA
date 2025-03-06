@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Footer() {
     return (
         <footer className="footer">
@@ -13,6 +15,8 @@ function Footer() {
                         <span>© 2025 PrecioYA</span>
                         <span className="separator">|</span>
                         <span>Desarrollado por <a href="https://www.mangoit.com.ar/" target="_blank" rel="noopener noreferrer">MangoIT</a></span>
+                        <span className="separator">|</span>
+                        <Link to="/terminos" className="footer-link">Términos y Condiciones</Link>
                     </div>
                     <div className="social-links">
                         <a href="https://github.com/JoacoDarquier" target="_blank" rel="noopener noreferrer" className="social-link">

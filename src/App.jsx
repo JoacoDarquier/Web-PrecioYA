@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 import Noticias from './pages/Noticias'
 import Calculadora from './pages/Calculadora'
 import LastUpdate from './components/LastUpdate'
-
+import TerminosCondiciones from './pages/TerminosCondiciones'
 function App() {
   const [category, setCategory] = useState("Dólares");
   const [dolares, setDolares] = useState([]);
@@ -112,6 +112,7 @@ function App() {
         } />
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/calculadora" element={<Calculadora />} />
+        <Route path="/terminos" element={<TerminosCondiciones />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,0 +1,148 @@
+.terminos-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
+}
+
+.terminos-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.terminos-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #14d64d;
+  margin-bottom: 10px;
+}
+
+.terminos-header p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.terminos-content {
+  background: rgba(18, 24, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terminos-section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.terminos-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.terminos-section h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #14d64d;
+  margin-bottom: 15px;
+}
+
+.terminos-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+.terminos-section p:last-child {
+  margin-bottom: 0;
+}
+
+.terminos-contact {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.terminos-contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.terminos-contact .material-icons {
+  color: #14d64d;
+  font-size: 20px;
+}
+
+.terminos-contact a {
+  color: #14d64d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.terminos-contact a:hover {
+  color: #0fb842;
+  text-decoration: underline;
+}
+
+/* Ajustes para modo claro */
+body:not(.dark-mode) .terminos-content {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .terminos-section p {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+body:not(.dark-mode) .terminos-header p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+body:not(.dark-mode) .terminos-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .terminos-container {
+    padding: 30px 15px;
+  }
+  
+  .terminos-content {
+    padding: 20px;
+  }
+  
+  .terminos-header h1 {
+    font-size: 28px;
+  }
+  
+  .terminos-section h2 {
+    font-size: 20px;
+  }
+  
+  .terminos-section p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminos-header h1 {
+    font-size: 24px;
+  }
+  
+  .terminos-section h2 {
+    font-size: 18px;
+  }
+  
+  .terminos-section p {
+    font-size: 14px;
+  }
+} 
